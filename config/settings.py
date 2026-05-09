@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Packages
     'rest_framework',
-    'rest_framework_simplejwt',
+    'rest_framework_simplejwt', 
     'corsheaders',
     'drf_spectacular',
     # Apps du projet
@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'ai_assistant',
     'analytics',
     'notifications',
-]
+]   
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
