@@ -7,6 +7,7 @@ from .serializers import TaskSerializer, SubTaskSerializer, CommentSerializer
 
 
 class TaskViewSet(viewsets.ModelViewSet):
+    queryset = Task.objects.none()
     serializer_class = TaskSerializer
     permission_classes = [permissions.IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
@@ -97,6 +98,7 @@ class TaskViewSet(viewsets.ModelViewSet):
 
 
 class SubTaskViewSet(viewsets.ModelViewSet):
+    queryset = SubTask.objects.none()
     serializer_class = SubTaskSerializer
     permission_classes = [permissions.IsAuthenticated]
 
