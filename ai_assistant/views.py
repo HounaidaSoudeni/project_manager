@@ -9,6 +9,8 @@ from projects.models import Project
 
 
 def call_claude(messages, system_prompt="Tu es un assistant de gestion de projets. Réponds en français."):
+    if not settings.ANTHROPIC_API_KEY:
+        raise requests.exceptions.RequestException("ANTHROPIC_API_KEY manquante dans le fichier .env")
     payload = {
         "model": "claude-sonnet-4-5",
         "max_tokens": 1024,

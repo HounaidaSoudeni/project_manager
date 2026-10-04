@@ -82,7 +82,8 @@ Comment permettre à une équipe projet de mieux organiser son travail, d’anti
 
 ### Backend
 - Python
-- Django 4.x
+- Python 3.12+
+- Django 6.x
 - Django REST Framework
 
 ### Base de données
@@ -148,3 +149,19 @@ Projet réalisé dans le cadre du PPG ING3 – École Sesame
 ## Statut du projet
 
 En cours de développement
+
+---
+
+## Installation et lancement
+
+```bash
+python3.12 -m venv env
+source env/bin/activate          # Windows : env\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env             # puis renseigner SECRET_KEY (et ANTHROPIC_API_KEY pour l'IA)
+python manage.py migrate
+python manage.py runserver
+```
+
+- Documentation Swagger : http://127.0.0.1:8000/api/docs/
+- Tests : `pytest`

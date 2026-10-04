@@ -8,6 +8,7 @@ from users.models import CustomUser
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
+    queryset = Project.objects.none()
     serializer_class = ProjectSerializer
     permission_classes = [permissions.IsAuthenticated, IsProjectChefOrReadOnly]
 
